@@ -7,20 +7,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.clariel.entidades.Loguin;
-import com.clariel.negocio.ClsLoguin;
-
 /**
- * Servlet implementation class ControllerAcceso
+ * Servlet implementation class ControllerProveedores
  */
-@WebServlet("/ControllerAcceso")
-public class ControllerAcceso extends HttpServlet {
+@WebServlet("/ControllerProveedores")
+public class ControllerProveedores extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ControllerAcceso() {
+    public ControllerProveedores() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -40,27 +37,7 @@ public class ControllerAcceso extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		
-		String user = request.getParameter("user");
-		String pass = request.getParameter("pass");
-		
-		Loguin log = new Loguin();
-		ClsLoguin clsLog = new ClsLoguin();
-		
-		log.setPass(user);
-		log.setUser(pass);
-		
-		int valordeacceso = clsLog.acceso(log);
-		
-		
-		if(valordeacceso == 1) {
-			System.out.println("WELCOME");
-			response.sendRedirect("Saludo.jsp");
-		}
-		else {
-			System.out.println("ERROR");
-			response.sendRedirect("Error.jsp");
-		}
-		
+		String evaluar= request.getParameter()
 	}
 
 }

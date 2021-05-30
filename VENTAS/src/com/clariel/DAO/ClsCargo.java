@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import com.clariel.Conexion.ConexionBd;
 import com.clariel.entidades.Cargo;
+import com.google.gson.JsonElement;
 
 public class ClsCargo {
 	
@@ -79,6 +80,11 @@ public class ClsCargo {
 		} catch (Exception e) {
 			System.out.println(e);
 		}
+	}
+
+	public JsonElement mostrarCargo() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

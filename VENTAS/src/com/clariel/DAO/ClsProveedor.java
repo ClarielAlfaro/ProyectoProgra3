@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 import com.clariel.Conexion.ConexionBd;
 import com.clariel.entidades.Proveedor;
+import com.google.gson.JsonElement;
 
 public class ClsProveedor {
 	
@@ -84,5 +85,11 @@ public class ClsProveedor {
 			System.out.println(e);
 		}
 	}
+
+	public JsonElement mostrarProveedor() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 }

@@ -7,6 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.clariel.DAO.ClsProveedor;
+import com.google.gson.Gson;
+
 /**
  * Servlet implementation class ControllerProveedores
  */
@@ -28,6 +31,10 @@ public class ControllerProveedores extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+		
+		
+
 	}
 
 	/**
@@ -37,7 +44,10 @@ public class ControllerProveedores extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		
-		String evaluar= request.getParameter()
+		ClsProveedor provDao = new ClsProveedor();
+		Gson json = new Gson();
+		response.getWriter().append(json.toJson(provDao.mostrarProveedor()));
+		
 	}
 
 }
